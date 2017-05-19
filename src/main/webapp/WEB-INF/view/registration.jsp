@@ -6,11 +6,14 @@
     <title>Registration page</title>
 </head>
 <body>
-<h1>Registration</h1>
+<h1>Register new user</h1>
 
-<form:form action="/registerNewUser" method="post" modelAttribute="user">
-    Login: <form:input path="login"/>
-    Password: <form:password path="password"/>
+<form:form action="/savenewuser" method="post" modelAttribute="user">
+    Name:  <br>
+    Last name: <br>
+    Login: <form:input path="login"/> <br>
+    Password: <form:password path="password"/> <br>
+    Confirm password: <br><br>
 
     <input type="submit" value="register">
 </form:form>

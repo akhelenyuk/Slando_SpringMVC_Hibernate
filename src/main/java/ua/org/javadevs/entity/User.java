@@ -16,6 +16,13 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
+    public User(String login, String password) {
+        this.login = login;
+        this.password = password;
+    }
+
+    public User() {
+    }
 
     public int getId() {
         return id;
@@ -35,5 +42,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
 }
